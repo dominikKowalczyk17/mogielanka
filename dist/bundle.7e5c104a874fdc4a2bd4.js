@@ -20,8 +20,81 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+}
+
+section .card {
+  border-radius: 5%;
+  background: #fff;
+  position: relative;
+  padding: 25px;
+}
+section .card .card-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .card .card-content .playerinfo {
+  background: #f1f3f4;
+  color: #000000;
+  padding: 10px 2px;
+  font-size: 16px;
+  line-height: 16px;
+  box-sizing: content-box;
+  text-align: center;
+}
+section .card .card-content .playerinfo h4 {
+  font-size: 18px;
+  line-height: 20px;
+  margin: 0 0 5px 0;
+}
+section .card .card-content .playerinfo p {
+  margin: 0;
+}
+section .card .card-content .playerinfo .playernumber {
+  font-family: khandmedium, sans-serif;
+  float: right;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  color: #2a2a2a;
+}
+section .card .card-content .playerinfo .playernumber span {
+  color: #e2007a;
+  font-size: 70px;
+  line-height: 60px;
+  display: block;
+}
+section .card .image {
+  height: 140px;
+  width: 140px;
+  border-radius: 10%;
+}
+section .card .image img {
+  padding-bottom: 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10%;
+}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAEA;EACI,SAAA;EACA,UAAA;EACA,sBAAA;AAAJ;;AAGA;EACI,aAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,mBAAA;AAAJ;;AAII;EACI,iBAAA;EACA,gBAAA;EACA,kBAAA;EACA,aAAA;AADR;AAGQ;EACI,aAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;AADZ;AAGY;EACI,mBAAA;EACA,cAAA;EACA,iBAAA;EACA,eAAA;EACA,iBAAA;EACA,uBAAA;EACA,kBAAA;AADhB;AAEgB;EACI,eAAA;EACA,iBAAA;EACA,iBAAA;AAApB;AAEgB;EACI,SAAA;AAApB;AAGgB;EACI,oCAAA;EACA,YAAA;EACA,eAAA;EACA,iBAAA;EACA,yBAAA;EACA,kBAAA;EACA,kBAAA;EACA,QAAA;EACA,WAAA;EACA,cAAA;AADpB;AAGoB;EACI,cAAA;EACA,eAAA;EACA,iBAAA;EACA,cAAA;AADxB;AAQQ;EACI,aAAA;EACA,YAAA;EACA,kBAAA;AANZ;AAUY;EACI,oBAAA;EACA,YAAA;EACA,WAAA;EACA,iBAAA;EACA,kBAAA;AARhB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600&display=swap');\r\n\r\n*{\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n \r\nbody {\r\n    height: 100vh;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    background: #f2f2f2ff;\r\n}\r\n \r\nsection {\r\n    .card {\r\n        border-radius: 5%;\r\n        background: #fff;\r\n        position: relative;\r\n        padding: 25px;\r\n        \r\n        .card-content {\r\n            padding: 10px;\r\n            display: flex;\r\n            flex-direction: column;\r\n            align-items: center;\r\n\r\n            .playerinfo {\r\n                background: #f1f3f4;\r\n                color: #000000;\r\n                padding: 10px 2px;\r\n                font-size: 16px;\r\n                line-height: 16px;\r\n                box-sizing: content-box;\r\n                text-align: center;\r\n                h4 {\r\n                    font-size: 18px;\r\n                    line-height: 20px;\r\n                    margin: 0 0 5px 0;\r\n                }\r\n                p {\r\n                    margin: 0;\r\n                }\r\n\r\n                .playernumber {\r\n                    font-family: khandmedium, sans-serif;\r\n                    float: right;\r\n                    font-size: 12px;\r\n                    line-height: 14px;\r\n                    text-transform: uppercase;\r\n                    text-align: center;\r\n                    position: absolute;\r\n                    top: 6px;\r\n                    right: 12px;\r\n                    color: #2a2a2a;\r\n\r\n                    span {\r\n                        color: #e2007a;\r\n                        font-size: 70px;\r\n                        line-height: 60px;\r\n                        display: block;\r\n                    }\r\n                }\r\n            }\r\n        }\r\n        \r\n        \r\n        .image {\r\n            height: 140px;\r\n            width: 140px;\r\n            border-radius: 10%;\r\n            \r\n            \r\n            \r\n            img {\r\n                padding-bottom: 10px;\r\n                height: 100%;\r\n                width: 100%;\r\n                object-fit: cover;\r\n                border-radius: 10%;\r\n            }\r\n        }\r\n    }\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -466,6 +539,16 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/assets/player.jpeg":
+/*!********************************!*\
+  !*** ./src/assets/player.jpeg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "player.jpeg";
+
 /***/ })
 
 /******/ 	});
@@ -519,6 +602,18 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -535,6 +630,29 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -549,9 +667,13 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _assets_player_jpeg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/player.jpeg */ "./src/assets/player.jpeg");
 
+
+var playerImg = document.getElementById("player");
+playerImg.src = _assets_player_jpeg__WEBPACK_IMPORTED_MODULE_1__;
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle65624a01e96eb421a7e2.js.map
+//# sourceMappingURL=bundle.7e5c104a874fdc4a2bd4.js.map
