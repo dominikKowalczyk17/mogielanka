@@ -1,0 +1,85 @@
+// Fix for: <fieldset> resizes wrong; appears to have unremovable `min-width: min-content`
+// https://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content
+@-moz-document url-prefix() {
+    fieldset {
+      display: table-cell;
+    }
+  }
+  
+  a { -webkit-user-modify: read-only; }
+//   * { -webkit-tap-highlight-color: rgba($color-yellow, .25); }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  html {
+    font-size: 62.5%;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+  }
+
+  body {
+    font-family: $font-main;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: $color-fg;
+    background: $color-bg;
+    overflow-y: scroll;
+    cursor: default;
+  }
+
+  a {
+    text-decoration: none;
+    // color: $color-blue;
+  }
+
+  h1, h2, h3, h4, p {
+    margin: 0;
+  }
+
+  .lazy-load {
+    opacity: 0;
+    transition: opacity .5s $easing-in;
+  }
+
+  .lazy-load--loaded {
+    opacity: 1;
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes pulse {
+    to { transform: scale(1.1); }
+  }
+
+  @keyframes increase {
+    from { transform: translate(-50%, 0) scaleX(.1); opacity: 1; }
+    to { transform: translate(125%, 0) scaleX(1); opacity: 1; }
+  }
+
+  @keyframes decrease {
+    from { transform: translate(-125%, 0) scaleX(1); opacity: 1; }
+    to { transform: translate(75%, 0) scaleX(.1); opacity: 1; }
+  }
+  

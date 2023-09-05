@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'GPP text';
+    src:
+      url('../fonts/GPP_Text-Bold.woff2') format('woff2'),
+      url('../fonts/GPP_Text-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: 'GPP text';
+    src:
+      url('../fonts/GPP_Text-Regular.woff2') format('woff2'),
+      url('../fonts/GPP_Text-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: 'GPP text';
+    src:
+      url('../fonts/GPP_Text-Light.woff2') format('woff2'),
+      url('../fonts/GPP_Text-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: light;
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: 'GPP text';
+    src:
+      url('../fonts/GPP_Text-Thin.woff2') format('woff2'),
+      url('../fonts/GPP_Text-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: thin;
+    font-display: fallback;
+  }
+  
