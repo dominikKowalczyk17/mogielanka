@@ -43,11 +43,22 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "fonts/[name].[hash:5].[ext]",
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack App",
+      title: "KS Mogielanka Mogielnica",
       filename: "index.html",
       template: path.resolve(__dirname, "src/template.html"),
     }),

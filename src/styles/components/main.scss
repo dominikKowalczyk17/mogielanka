@@ -7,15 +7,14 @@
     font-family: 'Khand', sans-serif;
 }
  
-body {
+ 
+section {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #f2f2f2ff;
-}
- 
-section {
+    
     .card {
         border-radius: 5%;
         background: #fff;

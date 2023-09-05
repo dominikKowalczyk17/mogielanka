@@ -1,0 +1,51 @@
+// Fonts
+
+$font-main: 'GPP text', sans-serif;
+
+// Colors
+$color-bg: #fff;
+$color-fg: #000;
+$color-primary: #01A7C1;
+$color-secondary: #0F1E45;
+$color-third: #F3FDFE;
+
+
+// Shadows
+
+$shadow-1: 0 0 15px rgba(0, 0, 0, .25);
+$shadow-2: 0 0 15px rgba(0, 0, 0, .15);
+
+// Easings
+
+$easing-in: cubic-bezier(.4, 0, .2, 1);
+$easing-out: cubic-bezier(.4, 0, .6, 1);
+
+// Transitions
+
+$transition-in: transform .15s $easing-in;
+$transition-out: transform .2s $easing-out;
+
+$transition-time1: .5s;
+
+// Breakpoints
+
+$min-xl: '(min-width: 1680px)';
+$min-lg: '(min-width: 1440px)';
+$min-sm: '(min-width: 1180px)';
+$min-xs: '(min-width: 768px)';
+$min-xxs: '(min-width: 320px)';
+
+$max-xl: 'all';
+$max-lg: '(max-width: 1679px)';
+$max-sm: '(max-width: 1439px)';
+$max-xs: '(max-width: 1179px)';
+$max-xxs: '(max-width: 767px)';
+$max-xxxs: '(max-width: 360px)';
+
+$xl: '#{$min-xl}';
+$lg: '#{$min-lg} and #{$max-lg}';
+$sm: '#{$min-sm} and #{$max-sm}';
+$xs: '#{$min-xs} and #{$max-xs}';
+$xxs: '#{$max-xxs}';
+$xxxs: '#{$max-xxxs}';
+$xsm: '#{$max-xs} and #{$min-xs}';
