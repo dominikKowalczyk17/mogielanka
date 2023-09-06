@@ -1,1 +1,1 @@
-export default __webpack_public_path__ + "fonts/GPP_Text-Thin.7db2c.woff";
+export default __webpack_public_path__ + "fonts/GPP_Text-Thin.woff";

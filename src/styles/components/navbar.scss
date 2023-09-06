@@ -1,3 +1,4 @@
+@import url(https://db.onlinewebfonts.com/c/9d25ea5c587d0f9d470aa9a3634735ea?family=ETmoudles);
 .navbar {
   transition: all $transition-time1;
 
@@ -32,15 +33,13 @@
   }
   .dropdown::after {
     content: "";
-    top: -20px;
-    left: 10px;
     position: relative;
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-bottom: 6px solid #000;
-    transform: scaleX(-1);
+    top: -1px;
+    left: 10px;
+    font-family: "ETmoudles";
+    font-size: 16px;
+    font-weight: 800;
+    content: "3";
 
     &:hover {
       border-bottom: 6px solid #fff;
@@ -57,6 +56,5 @@
 
   &__bottom-item {
     width: 100%;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
