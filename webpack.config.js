@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
@@ -8,7 +9,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name][contenthash].js",
+    filename: "[name].[contenthash].js",
     clean: true,
     assetModuleFilename: "[name][ext]",
   },
@@ -40,16 +41,48 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        test: /\.(png|svg|jpg|gif|jpeg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "gfx/[name].[hash:5].[ext]",
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "fonts/[name].[ext]",
+            },
+          },
+        ],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+          },
+          "sass-loader",
+        ],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack App",
+      title: "KS Mogielanka Mogielnica",
       filename: "index.html",
-      template: "src/template.html",
+      template: path.resolve(__dirname, "src/template.html"),
+    }),
+    new MiniCssExtractPlugin({
+      filename: "style.css",
+      chunkFilename: "css/[name].css",
     }),
   ],
 };
