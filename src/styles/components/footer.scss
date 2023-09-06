@@ -1,0 +1,42 @@
+.footer {
+  background-color: #21201e;
+
+  &__container {
+    color: lightgray;
+    position: relative;
+    text-align: left;
+    position: relative;
+    width: 80%;
+    max-width: 1080px;
+    margin: auto;
+  }
+
+  &__widgets {
+    padding: 3% 0 0;
+    display: flex;
+  }
+
+  &__widget {
+    margin-right: 2.5%;
+    margin-bottom: 2.5%;
+    width: 47.25%;
+  }
+  &__text {
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px;
+    color: lightgray;
+  }
+  &__bottom {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  &__info {
+    color: lightgray;
+    a {
+      text-decoration: none;
+      color: lightgray;
+    }
+  }
+}
