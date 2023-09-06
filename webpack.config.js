@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
@@ -40,8 +41,15 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        test: /\.(png|svg|jpg|gif|jpeg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "gfx/[name].[hash:5].[ext]",
+            },
+          },
+        ],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -49,9 +57,19 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "fonts/[name].[hash:5].[ext]",
+              name: "fonts/[name].[ext]",
             },
           },
+        ],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+          },
+          "sass-loader",
         ],
       },
     ],
@@ -61,6 +79,10 @@ module.exports = {
       title: "KS Mogielanka Mogielnica",
       filename: "index.html",
       template: path.resolve(__dirname, "src/template.html"),
+    }),
+    new MiniCssExtractPlugin({
+      filename: "style.css",
+      chunkFilename: "css/[name].css",
     }),
   ],
 };
