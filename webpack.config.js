@@ -75,7 +75,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "KS Mogielanka Mogielnica",
       filename: "index.html",
+      favicon: "./src/favicon/favicon.ico",
       template: path.resolve(__dirname, "src/template.html"),
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+      },
     }),
     new MiniCssExtractPlugin({
       filename: "style.css",
